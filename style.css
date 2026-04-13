@@ -278,7 +278,7 @@ body {
    Keep autoplay loop muted playsinline unchanged.
    ============================================= */
 .step-video-wrap video {
-  width: 100%;
+  width: 150%;
   max-height: 960px;
   object-fit: cover;
   display: block;
