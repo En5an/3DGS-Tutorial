@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Gaussian Splatting Tutorial</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+
+      <div class="logo">
+        <span class="logo-main" data-en="3D Gaussian Splatting" data-ja="3Dガウシアン スプラッティング">3D Gaussian Splatting</span>
+        <span class="logo-sub" data-en="Tutorial" data-ja="チュートリアル">Tutorial</span>
+      </div>
+
+      <nav class="nav">
+        <a href="#" class="nav-item active" data-section="realityscan-lichtfeld">RealityScan + Lichtfeld</a>
+        <a href="#" class="nav-item" data-section="realityscan-postshot">RealityScan + Postshot</a>
+        <a href="#" class="nav-item" data-section="metashape-lichtfeld">MetaShape + Lichtfeld</a>
+        <a href="#" class="nav-item" data-section="resources">
+          <span data-en="Resources" data-ja="リソース">Resources</span>
+        </a>
+        <a href="#" class="nav-item" data-section="photo-tips">
+          <span data-en="Photo Capture Tips" data-ja="撮影のヒント">Photo Capture Tips</span>
+        </a>
+      </nav>
+
+      <div class="controls">
+        <button class="icon-btn theme-toggle" aria-label="Toggle theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button class="icon-btn lang-toggle" aria-label="Toggle language">
+          <span class="lang-label-en">EN</span>
+          <span class="lang-label-ja">JP</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Workflow 01 -->
+    <div class="workflow active" id="realityscan-lichtfeld">
+      <div class="workflow-header">
+        <span class="workflow-index">01</span>
+        <h2 class="workflow-title">RealityScan + Lichtfeld</h2>
+      </div>
+      <div class="steps-list">
+        <div class="step"><div class="step-meta"><span class="step-num">Step 01</span></div><div class="step-body"><div class="step-img-wrap"><img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Step 1"></div><p class="step-desc" data-en="Step 1: This is the description for step one. Add your content here explaining what the user should do." data-ja="ステップ1：最初のステップの説明です。ここにコンテンツを追加してください。">Step 1: This is the description for step one. Add your content here explaining what the user should do.</p></div></div>
+        <div class="step"><div class="step-meta"><span class="step-num">Step 02</span></div><div class="step-body"><div class="step-img-wrap"><img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Step 2"></div><p class="step-desc" data-en="Step 2: This is the description for step two. Add your content here explaining what the user should do." data-ja="ステップ2：2番目のステップの説明です。ここにコンテンツを追加してください。">Step 2: This is the description for step two. Add your content here explaining what the user should do.</p></div></div>
+        <div class="step"><div class="step-meta"><span class="step-num">Step 03</span></div><div class="step-body"><div class="step-img-wrap"><img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Step 3"></div><p class="step-desc" data-en="Step 3: This is the description for step three. Add your content here explaining what the user should do." data-ja="ステップ3：3番目のステップの説明です。ここにコンテンツを追加してください。">Step 3: This is the description for step three. Add your content here explaining what the user should do.</p></div></div>
+        <div class="step"><div class="step-meta"><span class="step-num">Step 04</span></div><div class="step-body"><div class="step-img-wrap"><img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Step 4"></div><p class="step-desc" data-en="Step 4: This is the description for step four. Add your content here explaining what the user should do." data-ja="ステップ4：4番目のステップの説明です。ここにコンテンツを追加してください。">Step 4: This is the description for step four. Add your content here explaining what the user should do.</p></div></div>
+        <div class="step"><div class="step-meta"><span class="step-num">Step 05</span></div><div class="step-body"><div class="step-img-wrap"><img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Step 5"></div><p class="step-desc" data-en="Step 5: This is the description for step five. Add your content here explaining what the user should do." data-ja="ステップ5：5番目のステップの説明です。ここにコンテンツを追加してください。">Step 5: This is the description for step five. Add your content here explaining what the user should do.</p></div></div>
+        <div class="step"><div class="step-meta"><span class="step-num">Step 06</span></div><div class="step-body"><div class="step-img-wrap"><img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Step 6"></div><p class="step-desc" data-en="Step 6: This is the description for step six. Add your content here explaining what the user should do." data-ja="ステップ6：6番目のステップの説明です。ここにコンテンツを追加してください。">Step 6: This is the description for step six. Add your content here explaining what the user should do.</p></div></div>
+        <div class="step"><div class="step-meta"><span class="step-num">Step 07</span></div><div class="step-body"><div class="step-img-wrap"><img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Step 7"></div><p class="step-desc" data-en="Step 7: This is the description for step seven. Add your content here explaining what the user should do." data-ja="ステップ7：7番目のステップの説明です。ここにコンテンツを追加してください。">Step 7: This is the description for step seven. Add your content here explaining what the user should do.</p></div></div>
+        <div class="step"><div class="step-meta"><span class="step-num">Step 08</span></div><div class="step-body"><div class="step-img-wrap"><img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Step 8"></div><p class="step-desc" data-en="Step 8: This is the description for step eight. Add your content here explaining what the user should do." data-ja="ステップ8：8番目のステップの説明です。ここにコンテンツを追加してください。">Step 8: This is the description for step eight. Add your content here explaining what the user should do.</p></div></div>
+      </div>
+    </div>
+
+    <!-- Workflow 02 -->
+    <div class="workflow" id="realityscan-postshot">
+      <div class="workflow-header">
+        <span class="workflow-index">02</span>
+        <h2 class="workflow-title">RealityScan + Postshot</h2>
+      </div>
+      <div class="steps-list">
+        <div class="step"><div class="step-meta"><span class="step-num">Step 01</span></div><div class="step-body"><div class="step-img-wrap"><img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Step 1"></div><p class="step-desc" data-en="Step 1: Description for this workflow step." data-ja="ステップ1：このワークフローのステップの説明です。">Step 1: Description for this workflow step.</p></div></div>
+        <div class="step"><div class="step-meta"><span class="step-num">Step 02</span></div><div class="step-body"><div class="step-img-wrap"><img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Step 2"></div><p class="step-desc" data-en="Step 2: Description for this workflow step." data-ja="ステップ2：このワークフローのステップの説明です。">Step 2: Description for this workflow step.</p></div></div>
+        <div class="step"><div class="step-meta"><span class="step-num">Step 03</span></div><div class="step-body"><div class="step-img-wrap"><img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Step 3"></div><p class="step-desc" data-en="Step 3: Description for this workflow step." data-ja="ステップ3：このワークフローのステップの説明です。">Step 3: Description for this workflow step.</p></div></div>
+      </div>
+    </div>
+
+    <!-- Workflow 03 -->
+    <div class="workflow" id="metashape-lichtfeld">
+      <div class="workflow-header">
+        <span class="workflow-index">03</span>
+        <h2 class="workflow-title">MetaShape + Lichtfeld</h2>
+      </div>
+      <div class="steps-list">
+        <div class="step"><div class="step-meta"><span class="step-num">Step 01</span></div><div class="step-body"><div class="step-img-wrap"><img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Step 1"></div><p class="step-desc" data-en="Step 1: Description for this workflow step." data-ja="ステップ1：このワークフローのステップの説明です。">Step 1: Description for this workflow step.</p></div></div>
+        <div class="step"><div class="step-meta"><span class="step-num">Step 02</span></div><div class="step-body"><div class="step-img-wrap"><img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Step 2"></div><p class="step-desc" data-en="Step 2: Description for this workflow step." data-ja="ステップ2：このワークフローのステップの説明です。">Step 2: Description for this workflow step.</p></div></div>
+      </div>
+    </div>
+
+    <!-- Resources -->
+    <div class="workflow" id="resources">
+      <div class="workflow-header">
+        <span class="workflow-index">04</span>
+        <h2 class="workflow-title" data-en="Resources" data-ja="リソース">Resources</h2>
+      </div>
+      <div class="steps-list">
+        <div class="step"><div class="step-meta"><span class="step-num">01</span></div><div class="step-body"><div class="step-img-wrap"><img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Resource 1"></div><p class="step-desc" data-en="Resource 1: Description of this resource." data-ja="リソース1：このリソースの説明です。">Resource 1: Description of this resource.</p></div></div>
+        <div class="step"><div class="step-meta"><span class="step-num">02</span></div><div class="step-body"><div class="step-img-wrap"><img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Resource 2"></div><p class="step-desc" data-en="Resource 2: Description of this resource." data-ja="リソース2：このリソースの説明です。">Resource 2: Description of this resource.</p></div></div>
+      </div>
+    </div>
+
+    <!-- Photo Tips -->
+    <div class="workflow" id="photo-tips">
+      <div class="workflow-header">
+        <span class="workflow-index">05</span>
+        <h2 class="workflow-title" data-en="Photo Capture Tips" data-ja="撮影のヒント">Photo Capture Tips</h2>
+      </div>
+      <div class="steps-list">
+        <div class="step"><div class="step-meta"><span class="step-num">01</span></div><div class="step-body"><div class="step-img-wrap"><img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Tip 1"></div><p class="step-desc" data-en="Tip 1: Description of this photo capture tip." data-ja="ヒント1：撮影のヒントの説明です。">Tip 1: Description of this photo capture tip.</p></div></div>
+        <div class="step"><div class="step-meta"><span class="step-num">02</span></div><div class="step-body"><div class="step-img-wrap"><img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Tip 2"></div><p class="step-desc" data-en="Tip 2: Description of this photo capture tip." data-ja="ヒント2：撮影のヒントの説明です。">Tip 2: Description of this photo capture tip.</p></div></div>
+        <div class="step"><div class="step-meta"><span class="step-num">03</span></div><div class="step-body"><div class="step-img-wrap"><img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Tip 3"></div><p class="step-desc" data-en="Tip 3: Description of this photo capture tip." data-ja="ヒント3：撮影のヒントの説明です。">Tip 3: Description of this photo capture tip.</p></div></div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <span class="footer-text" data-en="3D Gaussian Splatting Tutorial" data-ja="3Dガウシアン スプラッティング チュートリアル">3D Gaussian Splatting Tutorial</span>
+  </footer>
+
+  <script>
+    const html = document.documentElement;
+
+    document.querySelector('.theme-toggle').addEventListener('click', () => {
+      html.setAttribute('data-theme', html.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
+    });
+
+    document.querySelector('.lang-toggle').addEventListener('click', () => {
+      const next = html.getAttribute('data-lang') === 'en' ? 'ja' : 'en';
+      html.setAttribute('data-lang', next);
+      document.querySelectorAll('[data-en][data-ja]').forEach(el => {
+        el.textContent = el.getAttribute('data-' + next);
+      });
+    });
+
+    document.querySelectorAll('.nav-item').forEach(item => {
+      item.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+        item.classList.add('active');
+        const id = item.getAttribute('data-section');
+        document.querySelectorAll('.workflow').forEach(w => {
+          w.classList.toggle('active', w.id === id);
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
